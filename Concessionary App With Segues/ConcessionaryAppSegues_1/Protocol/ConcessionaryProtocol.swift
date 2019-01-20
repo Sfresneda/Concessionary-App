@@ -1,6 +1,6 @@
 //
 //  ConcessionaryProtocol.swift
-//  CocessionaryAppSegues_1
+//  ConcessionaryAppSegues_1
 //
 //  Created by fresneda on 1/14/19.
 //  Copyright © 2019 fresneda. All rights reserved.
