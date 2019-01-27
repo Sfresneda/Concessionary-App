@@ -30,7 +30,7 @@ class CatalogViewModel: BaseViewModel, Concessionary {
     var brand: BrandEnum!
     var catalog: Array<Car>!
     
-    // MARK: Getters Setters
+    // MARK: - Getters Setters
     var catalogSortOrder: sortOrder {
         get{
             return self.order
