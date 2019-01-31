@@ -12,3 +12,5 @@ Evolution how to make a simple app for iOS with Swift 4
 [Concessionary App MVVM Version](https://github.com/Sfresneda/Concessionary-App/tree/master/Concessionary%20App%20MVVM)
 
 [Concessionary App VIPER Version](https://github.com/Sfresneda/Concessionary-App/tree/master/Concessionary%20App%20VIPER)
+
+[Concessionary App VIPER Version with Custom Alerts](https://github.com/Sfresneda/Concessionary-App/tree/master/Concessionary%20App%20VIPER%202)
