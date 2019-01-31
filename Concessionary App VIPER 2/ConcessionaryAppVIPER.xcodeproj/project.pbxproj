@@ -32,6 +32,10 @@
 		26804D3A22007F3500F30F16 /* CatalogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26804D3922007F3500F30F16 /* CatalogDetailView.swift */; };
 		26804D3D2200822900F30F16 /* CatalogDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26804D3C2200822900F30F16 /* CatalogDetailView.xib */; };
 		26804D3F2200886500F30F16 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26804D3E2200886500F30F16 /* Double.swift */; };
+		26C31F4322037AA900B6D509 /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C31F4122037AA900B6D509 /* Loader.xib */; };
+		26C31F4422037AA900B6D509 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C31F4222037AA900B6D509 /* LoaderViewController.swift */; };
+		26E071CA22022A1C00218710 /* BrandPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E071C922022A1C00218710 /* BrandPicker.xib */; };
+		26E071CE22022C6600218710 /* BrandPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E071CD22022C6600218710 /* BrandPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		26804D3922007F3500F30F16 /* CatalogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailView.swift; sourceTree = "<group>"; };
 		26804D3C2200822900F30F16 /* CatalogDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogDetailView.xib; sourceTree = "<group>"; };
 		26804D3E2200886500F30F16 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		26C31F4122037AA900B6D509 /* Loader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Loader.xib; sourceTree = "<group>"; };
+		26C31F4222037AA900B6D509 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		26E071C922022A1C00218710 /* BrandPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandPicker.xib; sourceTree = "<group>"; };
+		26E071CD22022C6600218710 /* BrandPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		2652782E22005D1C003ABC46 /* ConcessionaryAppVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				26E071C7220229F200218710 /* Reusable Views */,
 				26804CFE22005D4600F30F16 /* Resources */,
 				2652782F22005D1C003ABC46 /* AppDelegate.swift */,
 				26804D0022005D5B00F30F16 /* Enum */,
@@ -228,6 +237,49 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		26C31F4022037A9300B6D509 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				26C31F4222037AA900B6D509 /* LoaderViewController.swift */,
+				26C31F462203889F00B6D509 /* View */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		26C31F452203889100B6D509 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26E071C922022A1C00218710 /* BrandPicker.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26C31F462203889F00B6D509 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26C31F4122037AA900B6D509 /* Loader.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26E071C7220229F200218710 /* Reusable Views */ = {
+			isa = PBXGroup;
+			children = (
+				26C31F4022037A9300B6D509 /* Loader */,
+				26E071C822022A0A00218710 /* Brand Picker */,
+			);
+			path = "Reusable Views";
+			sourceTree = "<group>";
+		};
+		26E071C822022A0A00218710 /* Brand Picker */ = {
+			isa = PBXGroup;
+			children = (
+				26E071CD22022C6600218710 /* BrandPickerViewController.swift */,
+				26C31F452203889100B6D509 /* View */,
+			);
+			path = "Brand Picker";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,9 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2652783A22005D1E003ABC46 /* LaunchScreen.storyboard in Resources */,
+				26E071CA22022A1C00218710 /* BrandPicker.xib in Resources */,
 				2652783722005D1E003ABC46 /* Assets.xcassets in Resources */,
 				26804D292200792900F30F16 /* CarCellTableViewCell.xib in Resources */,
 				26804D3D2200822900F30F16 /* CatalogDetailView.xib in Resources */,
+				26C31F4322037AA900B6D509 /* Loader.xib in Resources */,
 				26804D262200656A00F30F16 /* CatalogListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E071CE22022C6600218710 /* BrandPickerViewController.swift in Sources */,
 				26804D3022007E7100F30F16 /* CatalogDetailBuilder.swift in Sources */,
 				26804D3622007F2100F30F16 /* CatalogDetailPresenter.swift in Sources */,
 				26804D0F22005F9900F30F16 /* CatalogListBuilder.swift in Sources */,
@@ -313,6 +368,7 @@
 				26804D1522005FE600F30F16 /* CatalogListInteractor.swift in Sources */,
 				26804D1D2200615400F30F16 /* BrandEnum.swift in Sources */,
 				26804D3822007F2B00F30F16 /* CatalogDetailInteractor.swift in Sources */,
+				26C31F4422037AA900B6D509 /* LoaderViewController.swift in Sources */,
 				26804D3222007F0C00F30F16 /* CatalogDetailWireframe.swift in Sources */,
 				26804D3A22007F3500F30F16 /* CatalogDetailView.swift in Sources */,
 				26804D2E22007E0A00F30F16 /* CatalogDetailContract.swift in Sources */,

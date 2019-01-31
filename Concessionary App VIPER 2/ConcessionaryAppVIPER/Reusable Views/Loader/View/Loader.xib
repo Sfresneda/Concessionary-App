@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoaderViewController" customModule="ConcessionaryAppVIPER" customModuleProvider="target">
+            <connections>
+                <outlet property="activityLoader" destination="zIB-WK-WVy" id="vsp-7g-fXH"/>
+                <outlet property="blurView" destination="VF3-DW-dY1" id="Psy-DT-Kmv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VF3-DW-dY1">
+                    <rect key="frame" x="94" y="240" width="187.5" height="187.5"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="so8-eh-SCr">
+                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="187.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zIB-WK-WVy">
+                                <rect key="frame" x="75.5" y="75" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zIB-WK-WVy" firstAttribute="centerX" secondItem="so8-eh-SCr" secondAttribute="centerX" id="Gsk-zZ-FLG"/>
+                            <constraint firstItem="zIB-WK-WVy" firstAttribute="centerY" secondItem="so8-eh-SCr" secondAttribute="centerY" id="p7w-Gc-5o9"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="VF3-DW-dY1" secondAttribute="height" multiplier="1:1" id="CE8-UX-iNY"/>
+                    </constraints>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VF3-DW-dY1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Agw-wT-tgD"/>
+                <constraint firstItem="VF3-DW-dY1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Hyr-mZ-0ac"/>
+                <constraint firstItem="VF3-DW-dY1" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="YJe-Jh-ndZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
