@@ -90,6 +90,8 @@ extension CatalogListView: UITableViewDelegate, UITableViewDataSource {
         cell.carImage.contentMode = .scaleAspectFill
         cell.carImage.clipsToBounds = true
         
+        cell.separatorInset = .zero
+        
         return cell
     }
     
