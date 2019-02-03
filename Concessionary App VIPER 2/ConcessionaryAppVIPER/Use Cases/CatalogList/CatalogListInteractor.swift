@@ -14,7 +14,7 @@ class CatalogListInteractor: CatalogListInteractorContract {
     weak var presenter: CatalogListPresenter?
     
     // MARK: - Contract Methods
-    func getCatalogListRequest() {
+    func getCatalogListRequest(completion: (Array<Car>) -> Void) {
         
         guard let brand = self.presenter?.getBrand() else { return }
         
@@ -39,7 +39,6 @@ class CatalogListInteractor: CatalogListInteractorContract {
                 )
             )
         }
-
-        self.presenter?.requestData(responseObject: cars)
+        completion(cars)
     }
 }

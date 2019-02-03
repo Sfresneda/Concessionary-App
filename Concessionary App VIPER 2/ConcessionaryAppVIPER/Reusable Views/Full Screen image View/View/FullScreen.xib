@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullScreenViewController" customModule="ConcessionaryAppVIPER" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="7Ai-sa-U83" id="ciZ-X8-Mcm"/>
+                <outlet property="closeButtonContainerView" destination="YnW-s5-cAL" id="huE-fS-YOR"/>
+                <outlet property="fullScreenImageView" destination="18Y-1h-QPx" id="oDO-Pg-Osa"/>
+                <outlet property="scrollView" destination="DPd-Vt-4xF" id="MZo-Ud-l5b"/>
+                <outlet property="view" destination="90V-So-nPn" id="7Ht-gC-5Jo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="90V-So-nPn">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPd-Vt-4xF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="18Y-1h-QPx">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="18Y-1h-QPx" firstAttribute="centerX" secondItem="DPd-Vt-4xF" secondAttribute="centerX" id="2f6-yc-iOQ"/>
+                        <constraint firstItem="18Y-1h-QPx" firstAttribute="centerY" secondItem="DPd-Vt-4xF" secondAttribute="centerY" id="3db-Zb-3re"/>
+                        <constraint firstItem="18Y-1h-QPx" firstAttribute="leading" secondItem="DPd-Vt-4xF" secondAttribute="leading" id="qbD-FH-uqb"/>
+                        <constraint firstItem="18Y-1h-QPx" firstAttribute="top" secondItem="DPd-Vt-4xF" secondAttribute="top" id="rxf-hN-NIo"/>
+                        <constraint firstAttribute="bottom" secondItem="18Y-1h-QPx" secondAttribute="bottom" id="sln-Sa-l22"/>
+                        <constraint firstAttribute="trailing" secondItem="18Y-1h-QPx" secondAttribute="trailing" id="vPt-cI-7qF"/>
+                    </constraints>
+                </scrollView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnW-s5-cAL">
+                    <rect key="frame" x="20" y="40" width="50" height="50"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mgv-xh-9T4">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ai-sa-U83">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="-1" eventType="touchDown" id="KZy-QU-4jz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7Ai-sa-U83" secondAttribute="bottom" id="HCw-pW-Xdc"/>
+                            <constraint firstItem="7Ai-sa-U83" firstAttribute="top" secondItem="Mgv-xh-9T4" secondAttribute="top" id="KIQ-dx-TZd"/>
+                            <constraint firstItem="7Ai-sa-U83" firstAttribute="leading" secondItem="Mgv-xh-9T4" secondAttribute="leading" id="Lny-V4-Lna"/>
+                            <constraint firstAttribute="trailing" secondItem="7Ai-sa-U83" secondAttribute="trailing" id="MIZ-PS-wRY"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="SHo-De-ICh"/>
+                        <constraint firstAttribute="height" constant="50" id="cyn-ZX-Dzp"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="DPd-Vt-4xF" firstAttribute="bottom" secondItem="ASJ-3L-fHh" secondAttribute="bottom" id="1BZ-wO-DFK"/>
+                <constraint firstItem="DPd-Vt-4xF" firstAttribute="leading" secondItem="ASJ-3L-fHh" secondAttribute="leading" id="8uS-zl-lcd"/>
+                <constraint firstItem="DPd-Vt-4xF" firstAttribute="top" secondItem="90V-So-nPn" secondAttribute="top" id="H3U-Sq-VMC"/>
+                <constraint firstItem="DPd-Vt-4xF" firstAttribute="trailing" secondItem="ASJ-3L-fHh" secondAttribute="trailing" id="T1N-LF-mdx"/>
+                <constraint firstItem="YnW-s5-cAL" firstAttribute="top" secondItem="ASJ-3L-fHh" secondAttribute="top" constant="20" id="mC6-La-pol"/>
+                <constraint firstItem="YnW-s5-cAL" firstAttribute="leading" secondItem="ASJ-3L-fHh" secondAttribute="leading" constant="20" id="vFG-5h-Y9v"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ASJ-3L-fHh"/>
+            <point key="canvasLocation" x="-13.6" y="33.733133433283363"/>
+        </view>
+    </objects>
+</document>

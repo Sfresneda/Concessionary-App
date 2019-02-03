@@ -30,4 +30,8 @@ class CatalogDetailPresenter: CatalogDetailPresenterContract {
     func dismissView() {
         self.wireframe.completeOrder()
     }
+    
+    func showFullScreen() {
+        self.wireframe.showFullScreen(model: self.viewModel.car)
+    }
 }

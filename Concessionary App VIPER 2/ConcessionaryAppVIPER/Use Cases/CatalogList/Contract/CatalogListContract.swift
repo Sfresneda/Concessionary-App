@@ -29,7 +29,7 @@ protocol CatalogListPresenterContract: class {
 protocol CatalogListInteractorContract: class {
     var presenter: CatalogListPresenter? { get set }
     
-    func getCatalogListRequest()
+    func getCatalogListRequest(completion: (Array<Car>) -> Void)
 }
 
 // MARK: - View

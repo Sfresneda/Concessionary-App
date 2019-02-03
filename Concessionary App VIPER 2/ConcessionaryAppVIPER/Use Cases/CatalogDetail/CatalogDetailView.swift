@@ -59,4 +59,8 @@ class CatalogDetailView: UIViewController, CatalogDetailViewContract {
     @IBAction func orderButtonPressed(_ action: Any) {
         self.presenter.orderNowButtonPressed()
     }
+    
+    @IBAction func fullScreenButtonPressed(_ action: Any) {
+        self.presenter.showFullScreen()
+    }
 }

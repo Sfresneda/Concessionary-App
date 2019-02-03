@@ -10,9 +10,11 @@ import UIKit
 
 class LoaderViewController: UIViewController, CatalogListWireframeDelegate {
 
+    // MARK: - Outlets
     @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var activityLoader: UIActivity!
     
+    // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +22,7 @@ class LoaderViewController: UIViewController, CatalogListWireframeDelegate {
         self.blurView.clipsToBounds = true
     }
     
+    // MARK: - Helper
     func hideView() {
         self.dismiss(animated: true, completion: nil)
     }

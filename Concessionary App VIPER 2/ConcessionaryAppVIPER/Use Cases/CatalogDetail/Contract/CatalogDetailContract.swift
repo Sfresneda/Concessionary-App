@@ -16,6 +16,7 @@ protocol CatalogDetailPresenterContract: class {
     func viewDidLoad()
     func orderNowButtonPressed()
     func dismissView()
+    func showFullScreen()
 }
 
 protocol CatalogDetailInteractorContract: class {
@@ -32,4 +33,6 @@ protocol CatalogDetailWireframeContract: class {
     var view: CatalogDetailView? { get set }
     
     func completeOrder()
+    func showFullScreen(model: Car)
+    func showInfo(title: String?, content: String?)
 }

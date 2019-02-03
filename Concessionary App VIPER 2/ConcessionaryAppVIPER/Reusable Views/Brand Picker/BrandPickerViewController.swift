@@ -14,14 +14,17 @@ protocol BrandPickerDelegate {
 
 class BrandPickerViewController: UIViewController {
 
+    // MARK: - Outlets
     @IBOutlet weak var alertWindow: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var brandPicker: UIPickerView!
     @IBOutlet weak var acceptButton: UIButton!
     
+    // MARK: - Vars
     var delegate: BrandPickerDelegate?
     private let pickerOptions = BrandEnum.allCases
     
+    // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -36,6 +39,14 @@ class BrandPickerViewController: UIViewController {
         self.acceptButton.setTitle("Select", for: .normal)
     }
     
+    deinit {
+        self.delegate?.onDeinit(brand: BrandEnum.allCases[self.brandPicker.selectedRow(inComponent: 0)])
+        #if DEBUG
+        print("deinit")
+        #endif
+    }
+
+    // MARK: - Actions
     @IBAction func buttonPressed(_ action: Any) {
         self.dismiss(animated: true, completion: {
             #if DEBUG
@@ -43,16 +54,11 @@ class BrandPickerViewController: UIViewController {
             #endif
         })
     }
-    
-    deinit {
-        self.delegate?.onDeinit(brand: BrandEnum.allCases[self.brandPicker.selectedRow(inComponent: 0)])
-        #if DEBUG
-        print("deinit")
-        #endif
-    }
 }
 
 extension BrandPickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    // MARK: - Mandatory Methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -60,6 +66,7 @@ extension BrandPickerViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.pickerOptions.count-1
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.pickerOptions[row].rawValue
     }

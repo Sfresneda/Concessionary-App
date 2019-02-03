@@ -21,7 +21,9 @@ class CatalogListPresenter: CatalogListPresenterContract {
     // MARK: - Contract Methods
     func loadCatalogList() {
         self.wireframe.showLoader()
-        self.interactor.getCatalogListRequest()
+        self.interactor.getCatalogListRequest(completion: { cars in
+            self.requestData(responseObject: cars)
+        })
     }
     
     func selectedItem(with indexPath: IndexPath) {

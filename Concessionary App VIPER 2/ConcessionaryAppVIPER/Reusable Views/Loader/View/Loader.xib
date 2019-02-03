@@ -23,13 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VF3-DW-dY1">
-                    <rect key="frame" x="94" y="240" width="187.5" height="187.5"/>
+                    <rect key="frame" x="131.5" y="277.5" width="112.5" height="112.5"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="so8-eh-SCr">
-                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="187.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="112" height="113"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zIB-WK-WVy">
-                                <rect key="frame" x="75.5" y="75" width="37" height="37"/>
+                                <rect key="frame" x="37.5" y="37.5" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <constraints>
@@ -46,7 +46,7 @@
             <constraints>
                 <constraint firstItem="VF3-DW-dY1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Agw-wT-tgD"/>
                 <constraint firstItem="VF3-DW-dY1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Hyr-mZ-0ac"/>
-                <constraint firstItem="VF3-DW-dY1" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="YJe-Jh-ndZ"/>
+                <constraint firstItem="VF3-DW-dY1" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.3" id="YJe-Jh-ndZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

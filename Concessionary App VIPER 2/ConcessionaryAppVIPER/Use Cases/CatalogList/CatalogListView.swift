@@ -13,6 +13,8 @@ class CatalogListView: UIViewController, CatalogListViewContract {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var sortButton: UIBarButtonItem!
     @IBOutlet weak var selectBrandButton: UIBarButtonItem!
     
@@ -35,6 +37,7 @@ class CatalogListView: UIViewController, CatalogListViewContract {
     
     // MARK: - Contract Methods
     func setupView() {
+        
         self.selectBrandButton.title = "Select Brand"
         self.sortButton.title = "Sort"
         
@@ -94,8 +97,18 @@ extension CatalogListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.presenter.selectedItem(with: indexPath)
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 250
     }
     
+    // Parallax cell effect
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if let visibleCells = self.tableView.visibleCells as? [CarCellTableViewCell] {
+            for parallaxCell in visibleCells {
+                let yOffset = ((self.tableView.contentOffset.y - parallaxCell.frame.origin.y) / parallaxCell.bounds.height) * 15.0
+                parallaxCell.offset(offset: CGPoint.init(x: 0, y: yOffset))
+            }
+        }
+    }
 }
