@@ -14,31 +14,27 @@ class CatalogListInteractor: CatalogListInteractorContract {
     weak var presenter: CatalogListPresenter?
     
     // MARK: - Contract Methods
-    func getCatalogListRequest(completion: (Array<Car>) -> Void) {
+    func getCatalogListRequest(cars: Dictionary<String, Double>? = nil, completion: (Array<Car>) -> Void) {
         
         guard let brand = self.presenter?.getBrand() else { return }
         
-        let carsData: Dictionary<String, Double> = Dictionary(
-            dictionaryLiteral:
-            ("V60", 30000),
-            ("V90", 55000),
-            ("XC40", 40000),
-            ("XC60", 50000),
-            ("XC90", 70000),
-            ("V40", 26000)
-        )
+        let carsData: Dictionary<String, Double> = cars ?? (self.presenter?.viewModel.mockupData)!
+        completion(self.bindModels(carsData: carsData, brand: brand))
+    }
+    
+    func bindModels(carsData: Dictionary<String, Double>, brand: BrandEnum) -> Array<Car> {
         var cars: Array<Car> = Array()
         _ = carsData.map{
             cars.append(
                 Car.init(
-                _name: $0.key,
-                _price: $0.value,
-                _imageNames: Array.init(
-                    arrayLiteral: $0.key.lowercased()),
-                _brand: brand
+                    _name: $0.key,
+                    _price: $0.value,
+                    _imageNames: Array.init(
+                        arrayLiteral: $0.key.lowercased()),
+                    _brand: brand
                 )
             )
         }
-        completion(cars)
+        return cars
     }
 }

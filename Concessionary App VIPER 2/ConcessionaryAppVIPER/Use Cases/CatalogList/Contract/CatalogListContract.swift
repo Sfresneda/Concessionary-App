@@ -17,7 +17,7 @@ protocol CatalogListPresenterContract: class {
     func loadCatalogList()
     func requestData(responseObject: Array<Car>)
     
-    func sortButtonPressed()
+    func sortButtonPressed(for state: SortOrder)
     func selectedItem(with indexPath: IndexPath)
     
     func selectBrand()
@@ -29,7 +29,7 @@ protocol CatalogListPresenterContract: class {
 protocol CatalogListInteractorContract: class {
     var presenter: CatalogListPresenter? { get set }
     
-    func getCatalogListRequest(completion: (Array<Car>) -> Void)
+    func getCatalogListRequest(cars: Dictionary<String, Double>?, completion: (Array<Car>) -> Void)
 }
 
 // MARK: - View

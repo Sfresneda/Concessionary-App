@@ -22,7 +22,7 @@ class CatalogListPresenter: CatalogListPresenterContract {
     func loadCatalogList() {
         self.wireframe.showLoader()
         self.interactor.getCatalogListRequest(completion: { cars in
-            self.requestData(responseObject: cars)
+            self.requestData(responseObject: cars)            
         })
     }
     
@@ -30,7 +30,7 @@ class CatalogListPresenter: CatalogListPresenterContract {
         self.wireframe.pushCarDetail(car: self.viewModel.catalog[indexPath.row])
     }
     
-    func sortButtonPressed() {
+    func sortButtonPressed(for state: SortOrder) {
         guard let _ = self.getBrand() else { return }
         self.viewModel.catalog =
             self.viewModel.catalog.sorted {
@@ -38,7 +38,7 @@ class CatalogListPresenter: CatalogListPresenterContract {
                 self.viewModel.sortOrder == SortOrder.asc ? el1.price < el2.price : el1.price > el2.price
             }
 
-        self.viewModel.sortOrder = self.viewModel.sortOrder == SortOrder.asc ? SortOrder.desc : SortOrder.asc
+        self.viewModel.sortOrder = state
         self.view?.updateSortButtonTitle()
         self.view?.refreshTableView()
     }

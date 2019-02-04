@@ -38,9 +38,28 @@
 		26A2A52C220649F3004D7367 /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A2A52A220649F3004D7367 /* FullScreenViewController.swift */; };
 		26C31F4322037AA900B6D509 /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C31F4122037AA900B6D509 /* Loader.xib */; };
 		26C31F4422037AA900B6D509 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C31F4222037AA900B6D509 /* LoaderViewController.swift */; };
+		26CBC0DA2208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBC0D92208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.swift */; };
+		26CBC0E82208B31200C2EEBC /* ConcessionaryAppVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBC0E72208B31200C2EEBC /* ConcessionaryAppVIPERTests.swift */; };
 		26E071CA22022A1C00218710 /* BrandPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E071C922022A1C00218710 /* BrandPicker.xib */; };
 		26E071CE22022C6600218710 /* BrandPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E071CD22022C6600218710 /* BrandPickerViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26CBC0DC2208B2F900C2EEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2652782422005D1C003ABC46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2652782B22005D1C003ABC46;
+			remoteInfo = ConcessionaryAppVIPER;
+		};
+		26CBC0EA2208B31200C2EEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2652782422005D1C003ABC46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2652782B22005D1C003ABC46;
+			remoteInfo = ConcessionaryAppVIPER;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		261518F222066C3400318E55 /* Info.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Info.xib; sourceTree = "<group>"; };
@@ -76,12 +95,32 @@
 		26A2A52A220649F3004D7367 /* FullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
 		26C31F4122037AA900B6D509 /* Loader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Loader.xib; sourceTree = "<group>"; };
 		26C31F4222037AA900B6D509 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		26CBC0D72208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcessionaryAppVIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26CBC0D92208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcessionaryAppVIPERUITests.swift; sourceTree = "<group>"; };
+		26CBC0DB2208B2F900C2EEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26CBC0E52208B31200C2EEBC /* ConcessionaryAppVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcessionaryAppVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26CBC0E72208B31200C2EEBC /* ConcessionaryAppVIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcessionaryAppVIPERTests.swift; sourceTree = "<group>"; };
+		26CBC0E92208B31200C2EEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26E071C922022A1C00218710 /* BrandPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandPicker.xib; sourceTree = "<group>"; };
 		26E071CD22022C6600218710 /* BrandPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2652782922005D1C003ABC46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26CBC0D42208B2F900C2EEBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26CBC0E22208B31200C2EEBC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -112,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				2652782E22005D1C003ABC46 /* ConcessionaryAppVIPER */,
+				26CBC0D82208B2F900C2EEBC /* ConcessionaryAppVIPERUITests */,
+				26CBC0E62208B31200C2EEBC /* ConcessionaryAppVIPERTests */,
 				2652782D22005D1C003ABC46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				2652782C22005D1C003ABC46 /* ConcessionaryAppVIPER.app */,
+				26CBC0D72208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.xctest */,
+				26CBC0E52208B31200C2EEBC /* ConcessionaryAppVIPERTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,6 +347,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		26CBC0D82208B2F900C2EEBC /* ConcessionaryAppVIPERUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26CBC0D92208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.swift */,
+				26CBC0DB2208B2F900C2EEBC /* Info.plist */,
+			);
+			path = ConcessionaryAppVIPERUITests;
+			sourceTree = "<group>";
+		};
+		26CBC0E62208B31200C2EEBC /* ConcessionaryAppVIPERTests */ = {
+			isa = PBXGroup;
+			children = (
+				26CBC0E72208B31200C2EEBC /* ConcessionaryAppVIPERTests.swift */,
+				26CBC0E92208B31200C2EEBC /* Info.plist */,
+			);
+			path = ConcessionaryAppVIPERTests;
+			sourceTree = "<group>";
+		};
 		26E071C7220229F200218710 /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +405,42 @@
 			productReference = 2652782C22005D1C003ABC46 /* ConcessionaryAppVIPER.app */;
 			productType = "com.apple.product-type.application";
 		};
+		26CBC0D62208B2F900C2EEBC /* ConcessionaryAppVIPERUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26CBC0DE2208B2F900C2EEBC /* Build configuration list for PBXNativeTarget "ConcessionaryAppVIPERUITests" */;
+			buildPhases = (
+				26CBC0D32208B2F900C2EEBC /* Sources */,
+				26CBC0D42208B2F900C2EEBC /* Frameworks */,
+				26CBC0D52208B2F900C2EEBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26CBC0DD2208B2F900C2EEBC /* PBXTargetDependency */,
+			);
+			name = ConcessionaryAppVIPERUITests;
+			productName = ConcessionaryAppVIPERUITests;
+			productReference = 26CBC0D72208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		26CBC0E42208B31200C2EEBC /* ConcessionaryAppVIPERTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26CBC0EC2208B31200C2EEBC /* Build configuration list for PBXNativeTarget "ConcessionaryAppVIPERTests" */;
+			buildPhases = (
+				26CBC0E12208B31200C2EEBC /* Sources */,
+				26CBC0E22208B31200C2EEBC /* Frameworks */,
+				26CBC0E32208B31200C2EEBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26CBC0EB2208B31200C2EEBC /* PBXTargetDependency */,
+			);
+			name = ConcessionaryAppVIPERTests;
+			productName = ConcessionaryAppVIPERTests;
+			productReference = 26CBC0E52208B31200C2EEBC /* ConcessionaryAppVIPERTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -356,6 +453,14 @@
 				TargetAttributes = {
 					2652782B22005D1C003ABC46 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					26CBC0D62208B2F900C2EEBC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2652782B22005D1C003ABC46;
+					};
+					26CBC0E42208B31200C2EEBC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2652782B22005D1C003ABC46;
 					};
 				};
 			};
@@ -373,6 +478,8 @@
 			projectRoot = "";
 			targets = (
 				2652782B22005D1C003ABC46 /* ConcessionaryAppVIPER */,
+				26CBC0D62208B2F900C2EEBC /* ConcessionaryAppVIPERUITests */,
+				26CBC0E42208B31200C2EEBC /* ConcessionaryAppVIPERTests */,
 			);
 		};
 /* End PBXProject section */
@@ -391,6 +498,20 @@
 				26C31F4322037AA900B6D509 /* Loader.xib in Resources */,
 				26804D262200656A00F30F16 /* CatalogListView.xib in Resources */,
 				26A2A52B220649F3004D7367 /* FullScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26CBC0D52208B2F900C2EEBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26CBC0E32208B31200C2EEBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +549,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		26CBC0D32208B2F900C2EEBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26CBC0DA2208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26CBC0E12208B31200C2EEBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26CBC0E82208B31200C2EEBC /* ConcessionaryAppVIPERTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26CBC0DD2208B2F900C2EEBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2652782B22005D1C003ABC46 /* ConcessionaryAppVIPER */;
+			targetProxy = 26CBC0DC2208B2F900C2EEBC /* PBXContainerItemProxy */;
+		};
+		26CBC0EB2208B31200C2EEBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2652782B22005D1C003ABC46 /* ConcessionaryAppVIPER */;
+			targetProxy = 26CBC0EA2208B31200C2EEBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2652783822005D1E003ABC46 /* LaunchScreen.storyboard */ = {
@@ -594,6 +744,90 @@
 			};
 			name = Release;
 		};
+		26CBC0DF2208B2F900C2EEBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53B5JX66J6;
+				INFOPLIST_FILE = ConcessionaryAppVIPERUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.ConcessionaryAppVIPERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ConcessionaryAppVIPER;
+			};
+			name = Debug;
+		};
+		26CBC0E02208B2F900C2EEBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53B5JX66J6;
+				INFOPLIST_FILE = ConcessionaryAppVIPERUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.ConcessionaryAppVIPERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ConcessionaryAppVIPER;
+			};
+			name = Release;
+		};
+		26CBC0ED2208B31200C2EEBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53B5JX66J6;
+				INFOPLIST_FILE = ConcessionaryAppVIPERTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.ConcessionaryAppVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcessionaryAppVIPER.app/ConcessionaryAppVIPER";
+			};
+			name = Debug;
+		};
+		26CBC0EE2208B31200C2EEBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53B5JX66J6;
+				INFOPLIST_FILE = ConcessionaryAppVIPERTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.ConcessionaryAppVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcessionaryAppVIPER.app/ConcessionaryAppVIPER";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -611,6 +845,24 @@
 			buildConfigurations = (
 				2652783F22005D1E003ABC46 /* Debug */,
 				2652784022005D1E003ABC46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26CBC0DE2208B2F900C2EEBC /* Build configuration list for PBXNativeTarget "ConcessionaryAppVIPERUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26CBC0DF2208B2F900C2EEBC /* Debug */,
+				26CBC0E02208B2F900C2EEBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26CBC0EC2208B31200C2EEBC /* Build configuration list for PBXNativeTarget "ConcessionaryAppVIPERTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26CBC0ED2208B31200C2EEBC /* Debug */,
+				26CBC0EE2208B31200C2EEBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

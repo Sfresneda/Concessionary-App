@@ -64,7 +64,8 @@ class CatalogListView: UIViewController, CatalogListViewContract {
     
     // MARK: - Actions
     @IBAction func sortButtonPressed(_ action: Any) {
-        self.presenter.sortButtonPressed()
+        let newState: SortOrder = self.viewModel.sortOrder == .asc ? .desc : .asc
+        self.presenter.sortButtonPressed(for: newState)
     }
     @IBAction func selectBrandButtonPressed(_ action: Any){
         self.presenter.selectBrand()
