@@ -25,9 +25,9 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="weW-aa-zO6">
-                    <rect key="frame" x="56.5" y="137" width="262.5" height="206.5"/>
+                    <rect key="frame" x="56.5" y="136.5" width="262.5" height="207"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2kJ-4i-PnE">
-                        <rect key="frame" x="0.0" y="0.0" width="262" height="206"/>
+                        <rect key="frame" x="0.0" y="0.0" width="262" height="207"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_title_alert_label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M97-g1-lG2">
@@ -38,6 +38,9 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LU8-Y0-0pK">
                                 <rect key="frame" x="0.0" y="60.5" width="262" height="80"/>
+                                <accessibility key="accessibilityConfiguration" label="Brand Picker">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="9Fb-Er-qfH"/>
                                 </constraints>
@@ -51,6 +54,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fs-KT-ptJ">
                                 <rect key="frame" x="0.0" y="161.5" width="262" height="45"/>
+                                <accessibility key="accessibilityConfiguration" label="Accept Brand Button"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="dKy-Io-OTr"/>
                                 </constraints>

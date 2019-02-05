@@ -28,6 +28,7 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1X-8O-wp6">
                     <rect key="frame" x="0.0" y="20" width="375" height="200"/>
+                    <accessibility key="accessibilityConfiguration" label="Car ImageView"/>
                     <connections>
                         <action selector="fullScreenButtonPressed:" destination="-1" eventType="touchDown" id="Wjy-bh-0ab"/>
                     </connections>
@@ -41,6 +42,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-OB-U0V">
                     <rect key="frame" x="20" y="602" width="335" height="45"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <accessibility key="accessibilityConfiguration" label="Order Button"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="dyi-Uz-haf"/>
                     </constraints>
