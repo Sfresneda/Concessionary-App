@@ -19,14 +19,10 @@ class CatalogListView: UIViewController, CatalogListViewContract {
     @IBOutlet weak var selectBrandButton: UIBarButtonItem!
     
     // MARK: - Contract Vars
-    var presenter: CatalogListPresenter!
+    var presenter: CatalogListPresenter?
     
     // MARK: - Vars
-    private var cellIdentifier = "CarCell"
-    
-    var viewModel: CatalogListEntity {
-        return presenter.viewModel
-    }
+    private var cellIdentifier = CarCellTableViewCell.reusableIdentifier
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -45,30 +41,34 @@ class CatalogListView: UIViewController, CatalogListViewContract {
         self.tableView.dataSource = self
         self.tableView.allowsSelection = true
         self.tableView.tableFooterView = UIView()
-        self.tableView.register(UINib.init(nibName: "CarCellTableViewCell", bundle: nil), forCellReuseIdentifier: self.cellIdentifier)
+        self.tableView.register(UINib.init(nibName: "CarCellTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
-    func refreshTableView() {
-        if let brand = self.presenter.getBrand() {
+    func reloadTableView() {
+        if let brand = self.presenter?.getBrand() {
             self.title = brand.rawValue
         }
         
         // Scroll to top
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -1), animated: true)
+        if 0 != self.tableView.numberOfRows(inSection: 0) {
+            self.tableView.scrollToRow(at: IndexPath.init(row: 0, section: 0),
+                                       at: .top,
+                                       animated: true)
+        }
+        
         self.tableView.reloadData()
     }
     
-    func updateSortButtonTitle(){
-        self.sortButton.title = "\(self.viewModel.sortOrder.rawValue) Sort"
+    func updateSortButtonTitle(_ newTitle: String) {
+        self.sortButton.title = newTitle
     }
     
     // MARK: - Actions
     @IBAction func sortButtonPressed(_ action: Any) {
-        let newState: SortOrder = self.viewModel.sortOrder == .asc ? .desc : .asc
-        self.presenter.sortButtonPressed(for: newState)
+        self.presenter?.sortButtonPressed()
     }
     @IBAction func selectBrandButtonPressed(_ action: Any){
-        self.presenter.selectBrand()
+        self.presenter?.selectBrand()
     }
 }
 
@@ -76,21 +76,16 @@ extension CatalogListView: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Mandatory Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.catalog.count
+        return self.presenter?.getCarsNumber() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier) as! CarCellTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier) as? CarCellTableViewCell,
+            let wrappedPresenter = self.presenter,
+            let car = wrappedPresenter.getCar(at: indexPath) else { return UITableViewCell.init() }
         
-        let car = self.viewModel.catalog[indexPath.row]
-        
-        cell.carName.text = "\(car.brand.rawValue) \(car.name)"
-        cell.carPrice.text = "\(car.price.formatWithoutDecimals) €"
-        
-        cell.carImage.image = UIImage.init(named: car.imageNames.first!)
-        cell.carImage.contentMode = .scaleAspectFill
-        cell.carImage.clipsToBounds = true
-        
+        cell.viewModel = CarCellViewModel.init(car: car)
+        cell.setup()
         cell.separatorInset = .zero
         
         return cell
@@ -98,7 +93,7 @@ extension CatalogListView: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Optional Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presenter.selectedItem(with: indexPath)
+        self.presenter?.selectedItem(with: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

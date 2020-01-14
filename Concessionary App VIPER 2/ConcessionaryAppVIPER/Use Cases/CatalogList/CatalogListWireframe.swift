@@ -17,9 +17,8 @@ class CatalogListWireframe: CatalogListWireframeContract {
     
     // MARK: - Vars
     var delegate: CatalogListWireframeDelegate?
-    
-    // MARK: - Contract Vars
     weak var view: CatalogListView?
+    var presenter: CatalogListPresenter?
     
     // MARK: - Contract Methods
     func pushCarDetail(car: Car) {
@@ -46,12 +45,17 @@ class CatalogListWireframe: CatalogListWireframeContract {
     func hideLoader() {
         self.delegate?.hideView()
     }
+    
+    func showError(localizedString: String) {
+        let alert = UIAlertController.init(title: "Error", message: localizedString, preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "Accept", style: .default, handler: nil))
+    }
 }
 
 extension CatalogListWireframe: BrandPickerDelegate {
     
     // MARK: - Mandatory Methods
     func onDeinit(brand: BrandEnum) {
-        self.view?.presenter.setBrand(newBrand: brand)
+        self.presenter?.setBrand(newBrand: brand)
     }
 }

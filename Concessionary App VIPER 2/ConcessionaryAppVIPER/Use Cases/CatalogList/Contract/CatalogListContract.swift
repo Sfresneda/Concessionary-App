@@ -10,43 +10,51 @@ import Foundation
 
 // MARK: - Presenter
 protocol CatalogListPresenterContract: class {
-    var interactor: CatalogListInteractor! { get set }
     var view: CatalogListView? { get set }
-    var wireframe: CatalogListWireframe! { get set }
+    var interactor: CatalogListInteractor? { get set }
+    var entity: CatalogListEntity? { get set }
+    var wireframe: CatalogListWireframe? { get set }
     
     func loadCatalogList()
     func requestData(responseObject: Array<Car>)
     
-    func sortButtonPressed(for state: SortOrder)
+    func sortButtonPressed()
     func selectedItem(with indexPath: IndexPath)
     
     func selectBrand()
     func setBrand(newBrand: BrandEnum)
     func getBrand() -> BrandEnum?
+    
+    func getSort() -> SortOrder?
+    
+    func getCar(at indexPath: IndexPath) -> Car?
+    func getCarsNumber() -> Int
 }
 
 // MARK: - Interactor
 protocol CatalogListInteractorContract: class {
     var presenter: CatalogListPresenter? { get set }
     
-    func getCatalogListRequest(cars: Dictionary<String, Double>?, completion: (Array<Car>) -> Void)
+    func getCatalogListRequest(brand: BrandEnum, success: ((Cars) -> Void), failure: ((Error) -> Void))
 }
 
 // MARK: - View
 protocol CatalogListViewContract: class {
-    var presenter: CatalogListPresenter! { get set }
+    var presenter: CatalogListPresenter? { get set }
     
     func setupView()
-    func refreshTableView()
-    func updateSortButtonTitle()
+    func reloadTableView()
+    func updateSortButtonTitle(_ newTitle: String)
 }
 
 // MARK: - Wireframe
 protocol CatalogListWireframeContract: class {
     var view: CatalogListView? { get set }
+    var presenter: CatalogListPresenter? { get set }
     
     func pushCarDetail(car: Car)
     func showBrandPicker()
     func showLoader()
     func hideLoader()
+    func showError(localizedString: String)
 }

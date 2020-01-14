@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260B88E623CE42D2006C62ED /* CarCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B88E523CE42D2006C62ED /* CarCellViewModel.swift */; };
+		260B88E923CE4B01006C62ED /* MockupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B88E823CE4B01006C62ED /* MockupProvider.swift */; };
 		261518F422066C3400318E55 /* Info.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261518F222066C3400318E55 /* Info.xib */; };
 		261518F522066C3400318E55 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261518F322066C3400318E55 /* InfoViewController.swift */; };
 		2652783022005D1C003ABC46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2652782F22005D1C003ABC46 /* AppDelegate.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260B88E523CE42D2006C62ED /* CarCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCellViewModel.swift; sourceTree = "<group>"; };
+		260B88E823CE4B01006C62ED /* MockupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupProvider.swift; sourceTree = "<group>"; };
 		261518F222066C3400318E55 /* Info.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Info.xib; sourceTree = "<group>"; };
 		261518F322066C3400318E55 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		2652782C22005D1C003ABC46 /* ConcessionaryAppVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcessionaryAppVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		260B88E723CE4AF3006C62ED /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				260B88E823CE4B01006C62ED /* MockupProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		261518F122066BF200318E55 /* Info */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +185,7 @@
 				26E071C7220229F200218710 /* Reusable Views */,
 				26804CFE22005D4600F30F16 /* Resources */,
 				2652782F22005D1C003ABC46 /* AppDelegate.swift */,
+				260B88E723CE4AF3006C62ED /* Provider */,
 				26804D0022005D5B00F30F16 /* Enum */,
 				26804CFF22005D5700F30F16 /* Extensions */,
 				26804D0222005D8200F30F16 /* Models */,
@@ -275,6 +288,7 @@
 		26804D272200791F00F30F16 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				260B88E523CE42D2006C62ED /* CarCellViewModel.swift */,
 				26804D2A2200795700F30F16 /* CarCellTableViewCell.swift */,
 				26804D4022008A3100F30F16 /* View */,
 			);
@@ -523,10 +537,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E071CE22022C6600218710 /* BrandPickerViewController.swift in Sources */,
+				260B88E923CE4B01006C62ED /* MockupProvider.swift in Sources */,
 				26804D3022007E7100F30F16 /* CatalogDetailBuilder.swift in Sources */,
 				26804D3622007F2100F30F16 /* CatalogDetailPresenter.swift in Sources */,
 				26804D0F22005F9900F30F16 /* CatalogListBuilder.swift in Sources */,
 				2652783022005D1C003ABC46 /* AppDelegate.swift in Sources */,
+				260B88E623CE42D2006C62ED /* CarCellViewModel.swift in Sources */,
 				26804D2B2200795700F30F16 /* CarCellTableViewCell.swift in Sources */,
 				26804D242200651800F30F16 /* CatalogListEntity.swift in Sources */,
 				26804D1F220061B500F30F16 /* Car.swift in Sources */,

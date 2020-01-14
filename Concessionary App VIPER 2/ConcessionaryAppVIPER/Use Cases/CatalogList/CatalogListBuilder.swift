@@ -13,21 +13,24 @@ class CatalogListBuilder {
     
     // MARK: - Setup
     static func build() -> UIViewController {
-        let viewController = CatalogListView.init(nibName: String(describing: CatalogListView.self), bundle: nil)
+        let view = CatalogListView.init(nibName: String(describing: CatalogListView.self), bundle: nil)
+        let entity = CatalogListEntity()
         let interactor = CatalogListInteractor()
         let presenter = CatalogListPresenter()
         let wireframe = CatalogListWireframe()
         
-        viewController.presenter = presenter
+        view.presenter = presenter
+
         interactor.presenter = presenter
-        presenter.view = viewController
+
+        presenter.view = view
+        presenter.entity = entity
         presenter.interactor = interactor
         presenter.wireframe = wireframe
-        wireframe.view = viewController
+
+        wireframe.view = view
+        wireframe.presenter = presenter
         
-        // help to force view load (avoid ex. nil on outlets)
-        _ = viewController.view
-        
-        return viewController
+        return view
     }
 }

@@ -9,32 +9,13 @@
 import Foundation
 
 class CatalogListInteractor: CatalogListInteractorContract {
-   
-    // MARK: - Contract Vars
+
+    // MARK: - Vars
     weak var presenter: CatalogListPresenter?
-    
-    // MARK: - Contract Methods
-    func getCatalogListRequest(cars: Dictionary<String, Double>? = nil, completion: (Array<Car>) -> Void) {
-        
-        guard let brand = self.presenter?.getBrand() else { return }
-        
-        let carsData: Dictionary<String, Double> = cars ?? (self.presenter?.viewModel.mockupData)!
-        completion(self.bindModels(carsData: carsData, brand: brand))
-    }
-    
-    func bindModels(carsData: Dictionary<String, Double>, brand: BrandEnum) -> Array<Car> {
-        var cars: Array<Car> = Array()
-        _ = carsData.map{
-            cars.append(
-                Car.init(
-                    _name: $0.key,
-                    _price: $0.value,
-                    _imageNames: Array.init(
-                        arrayLiteral: $0.key.lowercased()),
-                    _brand: brand
-                )
-            )
-        }
-        return cars
+    lazy var mockupProvider: MockupProvider = MockupProvider.init()
+
+    // MARK: - Contract
+    func getCatalogListRequest(brand: BrandEnum, success: ((Cars) -> Void), failure: ((Error) -> Void)) {
+        self.mockupProvider.getCars(brand: brand, success: success, failure: failure)
     }
 }

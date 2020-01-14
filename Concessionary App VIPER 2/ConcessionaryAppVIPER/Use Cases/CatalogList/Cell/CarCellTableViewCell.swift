@@ -11,23 +11,34 @@ import UIKit
 class CarCellTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
-    @IBOutlet weak var carImage: UIImageView!
-    @IBOutlet weak var carName: UILabel!
-    @IBOutlet weak var carPrice: UILabel!
+    @IBOutlet weak var carImageView: UIImageView!
+    @IBOutlet weak var carNameLabel: UILabel!
+    @IBOutlet weak var carPriceLabel: UILabel!
     
-    // MARK: - Life Cycle
+    // MARK: - Vars
+    var viewModel: CarCellViewModel?
+    
+    static var reusableIdentifier: String {
+        return CarCellTableViewCell.description()
+    }
+    
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    // MARK: - Setup
+    func setup() {
+        guard let vm = self.viewModel else { return }
+        self.carImageView.image = UIImage.init(named: vm.carImage)
+        self.carImageView.contentMode = .scaleToFill
         
-        self.carImage.contentMode = .scaleToFill
+        self.carNameLabel.text = vm.carName
+        self.carPriceLabel.text = vm.carPrice
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
+    
     // MARK: - Helper
     func offset(offset: CGPoint) {
-        self.carImage.frame = CGRect.init(x: offset.x, y: offset.y, width: self.carImage.bounds.width, height: self.carImage.bounds.height)
+        self.carImageView.frame = CGRect.init(x: offset.x, y: offset.y, width: self.carImageView.bounds.width, height: self.carImageView.bounds.height)
     }
 }
