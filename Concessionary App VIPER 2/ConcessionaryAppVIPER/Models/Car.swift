@@ -31,3 +31,14 @@ class Car {
             """)
     }
 }
+
+extension Car: Hashable {
+    static func == (lhs: Car, rhs: Car) -> Bool {
+        return lhs.name == rhs.name && lhs.brand == rhs.brand
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(brand)
+    }
+}

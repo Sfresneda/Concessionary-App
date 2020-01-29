@@ -12,7 +12,6 @@ enum BrandEnum: String {
     case audi = "Audi"
     case mercedes = "Mercedes"
     case volvo = "Volvo"
-    case none = ""
 }
 
 extension BrandEnum: CaseIterable{}

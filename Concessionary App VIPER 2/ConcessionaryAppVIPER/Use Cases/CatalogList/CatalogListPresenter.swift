@@ -11,11 +11,14 @@ import Foundation
 class CatalogListPresenter: CatalogListPresenterContract {
 
     // MARK: - Vars
-    weak var view: CatalogListView?
-    var interactor: CatalogListInteractor?
-    var entity: CatalogListEntity?
-    var wireframe: CatalogListWireframe?
+    weak var view: CatalogListViewContract?
+    var interactor: CatalogListInteractorContract?
+    var entity: CatalogListEntity!
+    var wireframe: CatalogListWireframeContract?
 
+    init(entity: CatalogListEntity) {
+        self.entity = entity
+    }
     
     // MARK: - Contract
     func loadCatalogList() {
@@ -33,20 +36,16 @@ class CatalogListPresenter: CatalogListPresenterContract {
     }
     
     func selectedItem(with indexPath: IndexPath) {
-        guard let wrappedEntity = self.entity else { return }
-        self.wireframe?.pushCarDetail(car: wrappedEntity.catalog[indexPath.row])
+        self.wireframe?.pushCarDetail(car: self.entity.catalog[indexPath.row])
     }
     
     func sortButtonPressed() {
-        guard let wrappedEntity = self.entity,
-            let wrappedSort = self.getSort() else { return }
-
-        let newSort: SortOrder = wrappedSort == .asc ? .desc : .asc
-        self.entity?.sortOrder = newSort
-        self.entity?.catalog =
-            wrappedEntity.catalog.sorted {
+        let newSort: SortOrder = self.getSort() == .asc ? .desc : .asc
+        self.entity.sortOrder = newSort
+        self.entity.catalog =
+            self.entity.catalog.sorted {
                 (el1, el2) -> Bool in
-                wrappedEntity.sortOrder == SortOrder.asc ?
+                self.entity.sortOrder == SortOrder.asc ?
                     el1.price < el2.price:
                     el1.price > el2.price
             }
@@ -55,36 +54,26 @@ class CatalogListPresenter: CatalogListPresenterContract {
         self.view?.reloadTableView()
     }
     
-    func requestData(responseObject: Array<Car>) {
-        self.entity?.catalog = responseObject
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2),
-                                      execute: {
-                                        self.wireframe?.hideLoader()
-                                        self.view?.reloadTableView()
-                                        
-        })
-    }
-    
     func selectBrand() {
         self.wireframe?.showBrandPicker()
     }
     
     func setBrand(newBrand: BrandEnum) {
-        self.entity?.brand = newBrand
+        self.entity.brand = newBrand
         self.loadCatalogList()
     }
     
     func getBrand() -> BrandEnum? {
-        return self.entity?.brand
+        return self.entity.brand
     }
     
     func getSort() -> SortOrder? {
-        return self.entity?.sortOrder
+        return self.entity.sortOrder
     }
     
     func getCar(at indexPath: IndexPath) -> Car? {
-        guard let wrappedEntity = self.entity else { return nil }
-        return wrappedEntity.catalog[indexPath.row]
+        guard !self.entity.catalog.isEmpty else { return nil }
+        return self.entity.catalog[indexPath.row]
     }
     func getCarsNumber() -> Int {
         return self.entity?.catalog.count ?? 0

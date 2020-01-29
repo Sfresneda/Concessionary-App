@@ -19,10 +19,10 @@ class FullScreenViewController: UIViewController {
     
     // MARK: - Vars
     private let minZoom: CGFloat = 1.0
-    private let maxZoom: CGFloat = 6.0
+    private let maxZoom: CGFloat = 4.0
     private var image: UIImage!
 
-    // MARK: - Cycle Life
+    // MARK: - LifeCycle
     init(_image: UIImage) {
         super.init(nibName: "FullScreen", bundle: nil)
         self.image = _image
@@ -61,7 +61,11 @@ class FullScreenViewController: UIViewController {
         
         self.scrollView.addGestureRecognizer(doubleTapGesture)
         self.scrollView.addGestureRecognizer(toogleCloseViewGesture)
-
+    }
+        
+    // MARK: - Actions
+    @IBAction func closeButtonPressed(_ action: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func toogleCloseView() {
@@ -76,11 +80,6 @@ class FullScreenViewController: UIViewController {
         }else {
             self.scrollView.setZoomScale(self.maxZoom, animated: true)
         }
-    }
-    
-    // MARK: - Actions
-    @IBAction func closeButtonPressed(_ action: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
 }
 

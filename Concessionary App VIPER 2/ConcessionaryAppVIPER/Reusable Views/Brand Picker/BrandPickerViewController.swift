@@ -24,7 +24,7 @@ class BrandPickerViewController: UIViewController {
     var delegate: BrandPickerDelegate?
     private let pickerOptions = BrandEnum.allCases
     
-    // MARK: - Cycle Life
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -64,7 +64,7 @@ extension BrandPickerViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.pickerOptions.count-1
+        return self.pickerOptions.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

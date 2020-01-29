@@ -10,6 +10,6 @@ import Foundation
 
 struct CatalogListEntity {
     var catalog: Array<Car> = Array()
-    var sortOrder: SortOrder = SortOrder.desc
+    var sortOrder: SortOrder?
     var brand: BrandEnum?    
 }

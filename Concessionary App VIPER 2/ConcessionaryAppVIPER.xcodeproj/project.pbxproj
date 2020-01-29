@@ -11,6 +11,10 @@
 		260B88E923CE4B01006C62ED /* MockupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B88E823CE4B01006C62ED /* MockupProvider.swift */; };
 		261518F422066C3400318E55 /* Info.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261518F222066C3400318E55 /* Info.xib */; };
 		261518F522066C3400318E55 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261518F322066C3400318E55 /* InfoViewController.swift */; };
+		2628427323E19D1800E7892B /* CatalogListWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628427223E19D1800E7892B /* CatalogListWireframeMock.swift */; };
+		2628427D23E19F7300E7892B /* CatalogListInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628427423E19D2700E7892B /* CatalogListInteractorMock.swift */; };
+		2628427E23E19F7300E7892B /* CatalogListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628427623E19D3100E7892B /* CatalogListViewMock.swift */; };
+		2628428023E19F8300E7892B /* ConcessionaryAppVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBC0D92208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.swift */; };
 		2652783022005D1C003ABC46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2652782F22005D1C003ABC46 /* AppDelegate.swift */; };
 		2652783722005D1E003ABC46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2652783622005D1E003ABC46 /* Assets.xcassets */; };
 		2652783A22005D1E003ABC46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2652783822005D1E003ABC46 /* LaunchScreen.storyboard */; };
@@ -38,9 +42,10 @@
 		26804D3F2200886500F30F16 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26804D3E2200886500F30F16 /* Double.swift */; };
 		26A2A52B220649F3004D7367 /* FullScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A2A529220649F3004D7367 /* FullScreen.xib */; };
 		26A2A52C220649F3004D7367 /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A2A52A220649F3004D7367 /* FullScreenViewController.swift */; };
+		26B39EFE23E1A38E00D93293 /* CatalogListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B39EFD23E1A38E00D93293 /* CatalogListPresenterTests.swift */; };
+		26B39F0023E1AFDC00D93293 /* CatalogListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B39EFF23E1AFDC00D93293 /* CatalogListInteractorTests.swift */; };
 		26C31F4322037AA900B6D509 /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C31F4122037AA900B6D509 /* Loader.xib */; };
 		26C31F4422037AA900B6D509 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C31F4222037AA900B6D509 /* LoaderViewController.swift */; };
-		26CBC0DA2208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBC0D92208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.swift */; };
 		26CBC0E82208B31200C2EEBC /* ConcessionaryAppVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBC0E72208B31200C2EEBC /* ConcessionaryAppVIPERTests.swift */; };
 		26E071CA22022A1C00218710 /* BrandPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E071C922022A1C00218710 /* BrandPicker.xib */; };
 		26E071CE22022C6600218710 /* BrandPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E071CD22022C6600218710 /* BrandPickerViewController.swift */; };
@@ -68,6 +73,9 @@
 		260B88E823CE4B01006C62ED /* MockupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupProvider.swift; sourceTree = "<group>"; };
 		261518F222066C3400318E55 /* Info.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Info.xib; sourceTree = "<group>"; };
 		261518F322066C3400318E55 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		2628427223E19D1800E7892B /* CatalogListWireframeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListWireframeMock.swift; sourceTree = "<group>"; };
+		2628427423E19D2700E7892B /* CatalogListInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListInteractorMock.swift; sourceTree = "<group>"; };
+		2628427623E19D3100E7892B /* CatalogListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListViewMock.swift; sourceTree = "<group>"; };
 		2652782C22005D1C003ABC46 /* ConcessionaryAppVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcessionaryAppVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2652782F22005D1C003ABC46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2652783622005D1E003ABC46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +105,8 @@
 		26804D3E2200886500F30F16 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		26A2A529220649F3004D7367 /* FullScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreen.xib; sourceTree = "<group>"; };
 		26A2A52A220649F3004D7367 /* FullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
+		26B39EFD23E1A38E00D93293 /* CatalogListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListPresenterTests.swift; sourceTree = "<group>"; };
+		26B39EFF23E1AFDC00D93293 /* CatalogListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListInteractorTests.swift; sourceTree = "<group>"; };
 		26C31F4122037AA900B6D509 /* Loader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Loader.xib; sourceTree = "<group>"; };
 		26C31F4222037AA900B6D509 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		26CBC0D72208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcessionaryAppVIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,17 +156,45 @@
 			isa = PBXGroup;
 			children = (
 				261518F322066C3400318E55 /* InfoViewController.swift */,
-				261518F62206705700318E55 /* View */,
+				261518F62206705700318E55 /* UI */,
 			);
 			path = Info;
 			sourceTree = "<group>";
 		};
-		261518F62206705700318E55 /* View */ = {
+		261518F62206705700318E55 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				261518F222066C3400318E55 /* Info.xib */,
 			);
-			path = View;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2628427123E19CFB00E7892B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2628427223E19D1800E7892B /* CatalogListWireframeMock.swift */,
+				2628427423E19D2700E7892B /* CatalogListInteractorMock.swift */,
+				2628427623E19D3100E7892B /* CatalogListViewMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		2628427823E19F4100E7892B /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				2628427923E19F4900E7892B /* CatalogList */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		2628427923E19F4900E7892B /* CatalogList */ = {
+			isa = PBXGroup;
+			children = (
+				2628427123E19CFB00E7892B /* Mocks */,
+				26B39EFD23E1A38E00D93293 /* CatalogListPresenterTests.swift */,
+				26B39EFF23E1AFDC00D93293 /* CatalogListInteractorTests.swift */,
+			);
+			path = CatalogList;
 			sourceTree = "<group>";
 		};
 		2652782322005D1C003ABC46 = {
@@ -323,17 +361,17 @@
 			isa = PBXGroup;
 			children = (
 				26A2A52A220649F3004D7367 /* FullScreenViewController.swift */,
-				26A2A52D220649FD004D7367 /* View */,
+				26A2A52D220649FD004D7367 /* UI */,
 			);
 			path = "Full Screen image View";
 			sourceTree = "<group>";
 		};
-		26A2A52D220649FD004D7367 /* View */ = {
+		26A2A52D220649FD004D7367 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				26A2A529220649F3004D7367 /* FullScreen.xib */,
 			);
-			path = View;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		26C31F4022037A9300B6D509 /* Loader */ = {
@@ -373,6 +411,7 @@
 		26CBC0E62208B31200C2EEBC /* ConcessionaryAppVIPERTests */ = {
 			isa = PBXGroup;
 			children = (
+				2628427823E19F4100E7892B /* Use Cases */,
 				26CBC0E72208B31200C2EEBC /* ConcessionaryAppVIPERTests.swift */,
 				26CBC0E92208B31200C2EEBC /* Info.plist */,
 			);
@@ -467,6 +506,7 @@
 				TargetAttributes = {
 					2652782B22005D1C003ABC46 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 					26CBC0D62208B2F900C2EEBC = {
 						CreatedOnToolsVersion = 10.1;
@@ -474,6 +514,7 @@
 					};
 					26CBC0E42208B31200C2EEBC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 2652782B22005D1C003ABC46;
 					};
 				};
@@ -492,8 +533,8 @@
 			projectRoot = "";
 			targets = (
 				2652782B22005D1C003ABC46 /* ConcessionaryAppVIPER */,
-				26CBC0D62208B2F900C2EEBC /* ConcessionaryAppVIPERUITests */,
 				26CBC0E42208B31200C2EEBC /* ConcessionaryAppVIPERTests */,
+				26CBC0D62208B2F900C2EEBC /* ConcessionaryAppVIPERUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -569,7 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26CBC0DA2208B2F900C2EEBC /* ConcessionaryAppVIPERUITests.swift in Sources */,
+				2628428023E19F8300E7892B /* ConcessionaryAppVIPERUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,7 +618,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B39F0023E1AFDC00D93293 /* CatalogListInteractorTests.swift in Sources */,
+				2628427323E19D1800E7892B /* CatalogListWireframeMock.swift in Sources */,
 				26CBC0E82208B31200C2EEBC /* ConcessionaryAppVIPERTests.swift in Sources */,
+				2628427D23E19F7300E7892B /* CatalogListInteractorMock.swift in Sources */,
+				2628427E23E19F7300E7892B /* CatalogListViewMock.swift in Sources */,
+				26B39EFE23E1A38E00D93293 /* CatalogListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,7 +783,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.ConcessionaryAppVIPER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -755,7 +801,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.ConcessionaryAppVIPER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -817,7 +863,7 @@
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.ConcessionaryAppVIPERTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcessionaryAppVIPER.app/ConcessionaryAppVIPER";
 			};
@@ -838,7 +884,7 @@
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.ConcessionaryAppVIPERTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcessionaryAppVIPER.app/ConcessionaryAppVIPER";
 			};

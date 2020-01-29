@@ -19,7 +19,7 @@ class CatalogListView: UIViewController, CatalogListViewContract {
     @IBOutlet weak var selectBrandButton: UIBarButtonItem!
     
     // MARK: - Contract Vars
-    var presenter: CatalogListPresenter?
+    var presenter: CatalogListPresenterContract?
     
     // MARK: - Vars
     private var cellIdentifier = CarCellTableViewCell.reusableIdentifier
@@ -27,11 +27,10 @@ class CatalogListView: UIViewController, CatalogListViewContract {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setupView()
-    }
+        self.presenter?.selectBrand()    }
     
-    // MARK: - Contract Methods
+    // MARK: - Setup
     func setupView() {
         
         self.selectBrandButton.title = "Select Brand"
@@ -42,6 +41,11 @@ class CatalogListView: UIViewController, CatalogListViewContract {
         self.tableView.allowsSelection = true
         self.tableView.tableFooterView = UIView()
         self.tableView.register(UINib.init(nibName: "CarCellTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+    }
+
+    // MARK: - Contract Methods
+    func vc() -> UIViewController {
+        return self
     }
     
     func reloadTableView() {

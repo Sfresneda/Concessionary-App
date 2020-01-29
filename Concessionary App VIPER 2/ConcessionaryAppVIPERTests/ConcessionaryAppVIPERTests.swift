@@ -15,7 +15,7 @@ class ConcessionaryAppVIPERTests: XCTestCase {
     var presenter: CatalogListPresenter!
     var interactor: CatalogListInteractor!
     var view: CatalogListView!
-    
+    /*
     let carsTestData: Dictionary<String, Double> = Dictionary(
         dictionaryLiteral:
         ("V60", 30000),
@@ -74,5 +74,5 @@ class ConcessionaryAppVIPERTests: XCTestCase {
             let cell = self.view.tableView.cellForRow(at: IndexPath.init(row: 0, section: 0)) as! CarCellTableViewCell
             XCTAssert(Double(cell.carPriceLabel.text!) == self.carsTestData.first?.value)
         }
-    }
+    }*/
 }

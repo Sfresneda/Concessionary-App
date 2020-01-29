@@ -7,16 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Presenter
 protocol CatalogListPresenterContract: class {
-    var view: CatalogListView? { get set }
-    var interactor: CatalogListInteractor? { get set }
-    var entity: CatalogListEntity? { get set }
-    var wireframe: CatalogListWireframe? { get set }
+    var view: CatalogListViewContract? { get set }
+    var interactor: CatalogListInteractorContract? { get set }
+    var wireframe: CatalogListWireframeContract? { get set }
     
     func loadCatalogList()
-    func requestData(responseObject: Array<Car>)
     
     func sortButtonPressed()
     func selectedItem(with indexPath: IndexPath)
@@ -33,24 +32,24 @@ protocol CatalogListPresenterContract: class {
 
 // MARK: - Interactor
 protocol CatalogListInteractorContract: class {
-    var presenter: CatalogListPresenter? { get set }
+    var presenter: CatalogListPresenterContract? { get set }
     
     func getCatalogListRequest(brand: BrandEnum, success: ((Cars) -> Void), failure: ((Error) -> Void))
 }
 
 // MARK: - View
 protocol CatalogListViewContract: class {
-    var presenter: CatalogListPresenter? { get set }
+    var presenter: CatalogListPresenterContract? { get set }
     
-    func setupView()
+    func vc() -> UIViewController
     func reloadTableView()
     func updateSortButtonTitle(_ newTitle: String)
 }
 
 // MARK: - Wireframe
 protocol CatalogListWireframeContract: class {
-    var view: CatalogListView? { get set }
-    var presenter: CatalogListPresenter? { get set }
+    var view: CatalogListViewContract? { get set }
+    var presenter: CatalogListPresenterContract? { get set }
     
     func pushCarDetail(car: Car)
     func showBrandPicker()

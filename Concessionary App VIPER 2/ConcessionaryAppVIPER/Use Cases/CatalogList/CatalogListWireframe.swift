@@ -17,13 +17,13 @@ class CatalogListWireframe: CatalogListWireframeContract {
     
     // MARK: - Vars
     var delegate: CatalogListWireframeDelegate?
-    weak var view: CatalogListView?
-    var presenter: CatalogListPresenter?
+    weak var view: CatalogListViewContract?
+    var presenter: CatalogListPresenterContract?
     
     // MARK: - Contract Methods
     func pushCarDetail(car: Car) {
         let viewController = CatalogDetailBuilder.build(with: car)
-        self.view?.navigationController?.pushViewController(viewController, animated: true)
+        self.view?.vc().navigationController?.pushViewController(viewController, animated: true)
     }
     
     func showBrandPicker() {
@@ -31,7 +31,7 @@ class CatalogListWireframe: CatalogListWireframeContract {
         viewController.modalPresentationStyle = .custom
         viewController.modalTransitionStyle = .crossDissolve
         viewController.delegate = self
-        self.view?.present(viewController, animated: true, completion: nil)
+        self.view?.vc().present(viewController, animated: true, completion: nil)
     }
     
     func showLoader() {
@@ -39,7 +39,7 @@ class CatalogListWireframe: CatalogListWireframeContract {
         viewController.modalPresentationStyle = .custom
         viewController.modalTransitionStyle = .crossDissolve
         self.delegate = viewController.self
-        self.view?.present(viewController, animated: true, completion: nil)
+        self.view?.vc().present(viewController, animated: true, completion: nil)
     }
     
     func hideLoader() {

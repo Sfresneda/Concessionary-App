@@ -14,17 +14,16 @@ class CatalogListBuilder {
     // MARK: - Setup
     static func build() -> UIViewController {
         let view = CatalogListView.init(nibName: String(describing: CatalogListView.self), bundle: nil)
-        let entity = CatalogListEntity()
-        let interactor = CatalogListInteractor()
-        let presenter = CatalogListPresenter()
-        let wireframe = CatalogListWireframe()
+        let entity = CatalogListEntity.init()
+        let interactor = CatalogListInteractor.init()
+        let presenter = CatalogListPresenter.init(entity: entity)
+        let wireframe = CatalogListWireframe.init()
         
         view.presenter = presenter
 
         interactor.presenter = presenter
 
         presenter.view = view
-        presenter.entity = entity
         presenter.interactor = interactor
         presenter.wireframe = wireframe
 

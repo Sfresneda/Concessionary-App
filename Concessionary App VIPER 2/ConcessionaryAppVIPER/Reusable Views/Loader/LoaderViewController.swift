@@ -14,7 +14,7 @@ class LoaderViewController: UIViewController, CatalogListWireframeDelegate {
     @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var activityLoader: UIActivity!
     
-    // MARK: - Cycle Life
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         

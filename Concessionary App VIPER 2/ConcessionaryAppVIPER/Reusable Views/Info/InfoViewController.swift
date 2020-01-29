@@ -26,7 +26,7 @@ class InfoViewController: UIViewController {
     
     var delegate: infoViewDelegate?
     
-    // MARK: - Cycle Life
+    // MARK: - LifeCycle
     init(_title: String?, _content: String?, _duration: Int = 2) {
         super.init(nibName: "Info", bundle: nil)
         

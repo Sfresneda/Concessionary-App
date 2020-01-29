@@ -11,7 +11,7 @@ import Foundation
 class CatalogListInteractor: CatalogListInteractorContract {
 
     // MARK: - Vars
-    weak var presenter: CatalogListPresenter?
+    weak var presenter: CatalogListPresenterContract?
     lazy var mockupProvider: MockupProvider = MockupProvider.init()
 
     // MARK: - Contract

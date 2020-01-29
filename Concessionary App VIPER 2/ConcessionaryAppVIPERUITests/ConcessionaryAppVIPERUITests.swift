@@ -8,12 +8,7 @@
 
 import XCTest
 
-extension BrandEnum: CaseIterable{}
-enum BrandEnum: String {
-    case audi = "Audi"
-    case mercedes = "Mercedes"
-    case volvo = "Volvo"
-}
+@testable import ConcessionaryAppVIPER
 
 class ConcessionaryAppVIPERUITests: XCTestCase {
 
