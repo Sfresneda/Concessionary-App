@@ -1,0 +1,35 @@
+[
+  {"name": "Audi A4", "price": 45000.00, "imagesName": ["audi_a4_1.jpg", "audi_a4_2.jpg", "audi_a4_3.jpg"], "brand": "Audi"},
+  {"name": "Audi Q5", "price": 52000.00, "imagesName": ["audi_q5_1.jpg", "audi_q5_2.jpg", "audi_q5_3.jpg"], "brand": "Audi"},
+  {"name": "Audi RS7", "price": 95000.00, "imagesName": ["audi_rs7_1.jpg", "audi_rs7_2.jpg", "audi_rs7_3.jpg"], "brand": "Audi"},
+  {"name": "Audi A6", "price": 60000.00, "imagesName": ["audi_a6_1.jpg", "audi_a6_2.jpg", "audi_a6_3.jpg"], "brand": "Audi"},
+  {"name": "Audi Q7", "price": 70000.00, "imagesName": ["audi_q7_1.jpg", "audi_q7_2.jpg", "audi_q7_3.jpg"], "brand": "Audi"},
+  {"name": "Audi S5", "price": 68000.00, "imagesName": ["audi_s5_1.jpg", "audi_s5_2.jpg", "audi_s5_3.jpg"], "brand": "Audi"},
+  {"name": "Audi A3", "price": 38000.00, "imagesName": ["audi_a3_1.jpg", "audi_a3_2.jpg", "audi_a3_3.jpg"], "brand": "Audi"},
+  {"name": "Audi Q3", "price": 42000.00, "imagesName": ["audi_q3_1.jpg", "audi_q3_2.jpg", "audi_q3_3.jpg"], "brand": "Audi"},
+  {"name": "Audi S3", "price": 50000.00, "imagesName": ["audi_s3_1.jpg", "audi_s3_2.jpg", "audi_s3_3.jpg"], "brand": "Audi"},
+  {"name": "Audi TT", "price": 55000.00, "imagesName": ["audi_tt_1.jpg", "audi_tt_2.jpg", "audi_tt_3.jpg"], "brand": "Audi"},
+
+  {"name": "Mercedes C-Class", "price": 50000.00, "imagesName": ["mercedes_c_class_1.jpg", "mercedes_c_class_2.jpg", "mercedes_c_class_3.jpg"], "brand": "Mercedes"},
+  {"name": "Mercedes E-Class", "price": 65000.00, "imagesName": ["mercedes_e_class_1.jpg", "mercedes_e_class_2.jpg", "mercedes_e_class_3.jpg"], "brand": "Mercedes"},
+  {"name": "Mercedes GLE", "price": 75000.00, "imagesName": ["mercedes_gle_1.jpg", "mercedes_gle_2.jpg", "mercedes_gle_3.jpg"], "brand": "Mercedes"},
+  {"name": "Mercedes A-Class", "price": 42000.00, "imagesName": ["mercedes_a_class_1.jpg", "mercedes_a_class_2.jpg", "mercedes_a_class_3.jpg"], "brand": "Mercedes"},
+  {"name": "Mercedes GLC", "price": 58000.00, "imagesName": ["mercedes_glc_1.jpg", "mercedes_glc_2.jpg", "mercedes_glc_3.jpg"], "brand": "Mercedes"},
+  {"name": "Mercedes S-Class", "price": 100000.00, "imagesName": ["mercedes_s_class_1.jpg", "mercedes_s_class_2.jpg", "mercedes_s_class_3.jpg"], "brand": "Mercedes"},
+  {"name": "Mercedes CLA", "price": 35000.00, "imagesName": ["mercedes_cla_1.jpg", "mercedes_cla_2.jpg", "mercedes_cla_3.jpg"], "brand": "Mercedes"},
+  {"name": "Mercedes GLA", "price": 38000.00, "imagesName": ["mercedes_gla_1.jpg", "mercedes_gla_2.jpg", "mercedes_gla_3.jpg"], "brand": "Mercedes"},
+  {"name": "Mercedes SL", "price": 90000.00, "imagesName": ["mercedes_sl_1.jpg", "mercedes_sl_2.jpg", "mercedes_sl_3.jpg"], "brand": "Mercedes"},
+  {"name": "Mercedes AMG GT", "price": 120000.00, "imagesName": ["mercedes_amg_gt_1.jpg", "mercedes_amg_gt_2.jpg", "mercedes_amg_gt_3.jpg"], "brand": "Mercedes"},
+
+  {"name": "Volvo XC60", "price": 48000.00, "imagesName": ["volvo_xc60_1.jpg", "volvo_xc60_2.jpg", "volvo_xc60_3.jpg"], "brand": "Volvo"},
+  {"name": "Volvo XC90", "price": 60000.00, "imagesName": ["volvo_xc90_1.jpg", "volvo_xc90_2.jpg", "volvo_xc90_3.jpg"], "brand": "Volvo"},
+  {"name": "Volvo S60", "price": 42000.00, "imagesName": ["volvo_s60_1.jpg", "volvo_s60_2.jpg", "volvo_s60_3.jpg"], "brand": "Volvo"},
+  {"name": "Volvo V60", "price": 45000.00, "imagesName": ["volvo_v60_1.jpg", "volvo_v60_2.jpg", "volvo_v60_3.jpg"], "brand": "Volvo"},
+  {"name": "Volvo XC40", "price": 38000.00, "imagesName": ["volvo_xc40_1.jpg", "volvo_xc40_2.jpg", "volvo_xc40_3.jpg"], "brand": "Volvo"},
+  {"name": "Volvo V90", "price": 55000.00, "imagesName": ["volvo_v90_1.jpg", "volvo_v90_2.jpg", "volvo_v90_3.jpg"], "brand": "Volvo"},
+  {"name": "Volvo S90", "price": 52000.00, "imagesName": ["volvo_s90_1.jpg", "volvo_s90_2.jpg", "volvo_s90_3.jpg"], "brand": "Volvo"},
+  {"name": "Volvo XC70", "price": 48000.00, "imagesName": ["volvo_xc70_1.jpg", "volvo_xc70_2.jpg", "volvo_xc70_3.jpg"], "brand": "Volvo"},
+  {"name": "Volvo S40", "price": 40000.00, "imagesName": ["volvo_s40_1.jpg", "volvo_s40_2.jpg", "volvo_s40_3.jpg"], "brand": "Volvo"},
+  {"name": "Volvo C30", "price": 35000.00, "imagesName": ["volvo_c30_1.jpg", "volvo_c30_2.jpg", "volvo_c30_3.jpg"], "brand": "Volvo"}
+]
+
